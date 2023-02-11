@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #4776e6;
+  background: -webkit-linear-gradient(to right, #8e54e9, #4776e6);
+  background: linear-gradient(to right, #8e54e9, #4776e6);
+}
+
+.todo-container {
+  width: 400px;
+  min-height: 148px;
+  background-color: #fff;
+  padding: 16px;
+}
+
+@media (max-width: 575px) {
+  .todo-container {
+    width: calc(100vw - 24px);
+    margin: 0 auto;
+  }
+}
+
+form {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+form input {
+  flex-grow: 1;
+  height: 48px;
+  margin-right: 8px;
+  padding: 8px;
+}
+
+.add-edit {
+  border: none;
+  outline: none;
+  height: 48px;
+  width: 56px;
+  font-size: 20px;
+  background-color: #01539d;
+  color: #fff;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-list-container {
+  max-height: 310px;
+  overflow-y: auto;
+}
+
+.todo-list-container::-webkit-scrollbar {
+  display: none;
+}
+
+.todo-list-container li {
+  list-style-type: none;
+  background-color: #f1f1f1;
+  padding: 8px;
+  font-size: 18px;
+
+  display: flex;
+  align-items: center;
+}
+
+.todo-list-container li:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.todo-list-container li span {
+  flex-grow: 1;
+  max-width: 80%;
+  margin-right: 8px;
+}
+
+.additional-actions-btn {
+  display: flex;
+  align-items: center;
+}
+
+.additional-actions-btn button {
+  border: none;
+  outline: none;
+  padding: 8px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #ee4e34;
+  cursor: pointer;
+}
+
+.additional-actions-btn button:not(:last-child) {
+  margin-right: 6px;
+}
